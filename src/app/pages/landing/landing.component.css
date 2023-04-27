@@ -1,0 +1,37 @@
+
+#page-header h1{
+  color: #fffffe;
+  font-weight: bolder;
+  font-size: 52px;
+}
+#page-header p{
+  color: #a7a9be;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+#page-header img{
+  width: 363px;
+  height: 360px;
+}
+
+.btn-warning{
+  background-color: #ff8906;
+  color: #fffffe;
+}
+
+/*--------------------------------------------------------------
+# other sections
+--------------------------------------------------------------*/
+
+#page-header{
+  background-color: #0f0e17;
+}
+
+#testimonials{
+  background-color: #fffffe;
+}
+
+#contact {
+  background-color: #0f0e17;
+}

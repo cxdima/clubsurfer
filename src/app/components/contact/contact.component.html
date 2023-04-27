@@ -1,0 +1,100 @@
+<div class="container">
+
+  <div class="text-center pb-5">
+    <h1>Contact</h1>
+    <p class="lead mb-0">Reach out to us.</p>
+  </div>
+
+  <div class="row">
+
+    <div class="col-lg-5">
+
+      <div class="left-panel w-100 p-5">
+
+        <div class="row">
+          <div>
+            <p><i class="bi bi-geo-alt"></i>A108 Adam Street, New York, NY 535022</p>
+          </div>
+          <div>
+            <p><i class="bi bi-envelope"></i>info@example.com</p>
+          </div>
+          <div>
+            <p><i class="bi bi-phone"></i>+1 5589 55488 55s</p>
+          </div>
+        </div>
+
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+      <form class="right-panel w-100 p-5 needs-validation" [formGroup]="contactForm" (submit)="onSubmit()" novalidate>
+        <div class="row">
+
+          <div class="col-md-6 form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder=" "
+              [class.is-invalid]="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)"
+              formControlName="name"
+            />
+            <label for="name" style="margin-left: 12px;">Name</label>
+            <div class="invalid-feedback">
+              Enter your name
+            </div>
+          </div>
+
+          <div class="col-md-6 form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="email"
+              placeholder=" "
+              [class.is-invalid]="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)"
+              formControlName="email"
+            />
+            <label for="email" style="margin-left: 12px;">Email</label>
+            <div class="invalid-feedback">
+              Enter a valid email
+            </div>
+          </div>
+        </div>
+
+        <div class="col form-floating">
+          <input
+            type="text"
+            class="form-control"
+            id="subject"
+            placeholder=" "
+            [class.is-invalid]="contactForm.get('subject')?.invalid && (contactForm.get('subject')?.dirty || contactForm.get('subject')?.touched)"
+            formControlName="subject"
+          />
+          <label for="subject">Subject</label>
+          <div class="invalid-feedback">
+            Enter your subject
+          </div>
+        </div>
+        <div class="form-floating">
+          <textarea
+            class="form-control"
+            type="text"
+            placeholder=" "
+            id="message"
+            [class.is-invalid]="contactForm.get('message')?.invalid && (contactForm.get('message')?.dirty || contactForm.get('message')?.touched)"
+            formControlName="message"
+          ></textarea>
+          <label for="message">Message</label>
+          <div class="invalid-feedback">
+            Enter your message
+          </div>
+        </div>
+        <button class="btn btn-warning p-3 w-100" type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>

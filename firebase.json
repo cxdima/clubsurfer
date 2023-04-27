@@ -1,0 +1,20 @@
+{
+  "hosting": [{
+    "site": "tasteastic",
+    "public": "/dist/clubsurfer",
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "trailingSlash": false
+  }],
+  "redirects": [
+    {
+      "source": "/404.html",
+      "destination": "/page-not-found",
+      "type": 200
+    }
+  ]
+}

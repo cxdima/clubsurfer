@@ -1,0 +1,83 @@
+<section class="pb-5 d-flex align-items-center">
+  <div class="d-flex justify-content-center container">
+    <div>
+
+      <!--header-->
+      <div class="mb-4">
+        <h1 class="display-6 fw-semibold text-center">Social Sign-up</h1>
+        <p class="lead text-center">Finish setting up your new account</p>
+      </div>
+
+      <!-- input fields + checkbox -->
+      <div class="mb-3">
+        <form class="needs-validation" [formGroup]="signupForm" (submit)="onSubmit()" novalidate>
+          <!-- first name + last name row -->
+          <div class="row">
+            <div class="col form-floating">
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                placeholder=" "
+                [class.is-invalid]="signupForm.get('firstName')?.invalid && (signupForm.get('firstName')?.dirty || signupForm.get('firstName')?.touched)"
+                formControlName="firstName"
+              />
+              <label for="firstName" style="margin-left: 12px;">First name</label>
+              <div class="invalid-feedback">
+                First name is required
+              </div>
+            </div>
+            <div class="col form-floating">
+              <input
+                required
+                type="text"
+                class="form-control"
+                id="lastName"
+                placeholder=" "
+                [class.is-invalid]="signupForm.get('lastName')?.invalid && (signupForm.get('lastName')?.dirty || signupForm.get('lastName')?.touched)"
+                formControlName="lastName"
+              />
+              <label for="lastName" style="margin-left: 12px;">Last name</label>
+              <div class="invalid-feedback">
+                Last name is required
+              </div>
+            </div>
+            <div class="col form-floating d-none">
+              <input
+                required
+                type="email"
+                class="form-control"
+                id="hidden"
+                placeholder=" "
+              />
+              <label for="hidden" style="margin-left: 12px;">Last name</label>
+              <div class="invalid-feedback">
+                Last name is required
+              </div>
+            </div>
+          </div>
+
+          <div class="form-floating my-4">
+            <input
+              required
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder=" "
+              [class.is-invalid]="signupForm.get('password')?.invalid && (signupForm.get('password')?.dirty || signupForm.get('password')?.touched)"
+              formControlName="password"
+              value=""
+            />
+            <label for="password">Password</label>
+            <div class="invalid-feedback">
+              Please enter a valid password
+            </div>
+          </div>
+
+          <!--Sign In button-->
+          <button class="btn btn-warning w-100 p-2" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,50 @@
+h1{
+  color: #fffffe;
+}
+p{
+  color: #a7a9be;
+}
+
+.btn{
+  background-color: #ff8906;
+  color: #fffffe;
+  font-weight: bolder;
+}
+
+i{
+  width: 44px !important;
+  height: 44px !important;
+  padding-right: 16px;
+  color: #ff8906;
+}
+
+.left-panel {
+  background: #fffffe;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+}
+
+.left-panel p{
+  color: #2e2f3e;
+}
+
+.right-panel {
+  background: #fffffe;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+}
+
+.form-floating{
+  padding-bottom: 24px;
+}
+
+textarea{
+  min-height: 10rem !important;
+}
+
+iframe{
+  margin-top: 16px;
+  border-radius: 4px !important;
+  width: 100%;
+  height: 270px;
+}

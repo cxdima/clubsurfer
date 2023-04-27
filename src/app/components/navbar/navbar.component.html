@@ -1,0 +1,164 @@
+<div class="navbar bg-white sticky-top navbar-expand-md">
+  <div class="container">
+    <a class="navbar-brand fw-bolder" routerLink="/landing">Clubsurfer</a>
+    <button class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav"
+            aria-controls="offcanvasNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="offcanvas offcanvas-end" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+
+      <div class="d-flex flex-column h-100 justify-content-between offcanvas-body p-0">
+
+        <div class="mb-auto">
+          <div class="nav flex-md-row flex-column">
+            <ul class="nav flex-md-row flex-column mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/breakfast">
+                  <div class="d-flex">
+                    <i class="bi bi-link-45deg d-block d-md-none"></i>
+                    <span>Clubs</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/lunch">
+                  <div class="d-flex">
+                    <i class="bi bi-link-45deg d-block d-md-none"></i>
+                    <span>People</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/dinner">
+                  <div class="d-flex">
+                    <i class="bi bi-link-45deg d-block d-md-none"></i>
+                    <span>Jobs</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/dessert">
+                  <div class="d-flex">
+                    <i class="bi bi-link-45deg d-block d-md-none"></i>
+                    <span>Volunteering</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <div class="ms-auto">
+              <div class="d-none d-md-block mt-1" *ngIf="isLoggedIn">
+                <div class="dropdown text-center d-none d-md-block">
+                  <button
+                    class="dropdown-toggle border-0 bg-white my-1"
+                    type="button"
+                    id="dropdownMenuButton"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                    data-bs-placement="left-end"
+                  >
+                    <i class="bi bi-person-circle text-black"></i>
+                  </button>
+                  <ul
+                    class="dropdown-menu dropdown-menu-end py-0"
+                    aria-labelledby="dropdownMenuButton"
+                    data-bs-placement="left-end"
+                  >
+                    <li>
+                      <a class="dropdown-item p-2 btrr" routerLink="/settings">
+                        <i class="bi bi-gear"></i>
+                        <span>Account Settings</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item p-2" routerLink="/favorites">
+                        <i class="bi bi-heart"></i>
+                        <span>Favorite Recipes</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item p-2" routerLink="/notifications">
+                        <i class="bi bi-bell"></i>
+                        <span>Notifications</span>
+                      </a>
+                    </li>
+                    <li>
+                      <hr class="dropdown-divider my-0">
+                    </li>
+                    <li>
+                      <a class="dropdown-item p-2 bbrr" (click)="logout()" routerLink="">
+                        <i class="bi bi-box-arrow-right"></i>
+                        <span>Log out</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div *ngIf="!isLoggedIn" class="d-none d-md-block">
+                <button class="btn btn-warning my-2 ms-3 px-3" routerLink="/login">Log In</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div *ngIf="isLoggedIn;">
+            <!--mobile bot-->
+            <hr class="my-0 d-block d-md-none">
+            <ul class="d-block d-md-none nav">
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/settings">
+                  <div class="d-flex">
+                    <i class="bi bi-gear" style="margin-right: 12px;"></i>
+                    <span>Account Settings</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/favorites">
+                  <div class="d-flex">
+                    <i class="bi bi-heart" style="margin-right: 12px;"></i>
+                    <span>Favorite Recipes</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/notifications">
+                  <div class="d-flex">
+                    <i class="bi bi-bell" style="margin-right: 12px;"></i>
+                    <span>Notifications</span>
+                  </div>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" (click)="logout()" routerLink="">
+                  <div class="d-flex">
+                    <i class="bi bi-box-arrow-right" style="margin-right: 12px;"></i>
+                    <span>Log out</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <!--end-->
+          </div>
+          <div class="d-block d-md-none" *ngIf="!isLoggedIn">
+            <hr class="my-0">
+            <ul>
+              <li class="nav-item">
+                <a class="nav-link" routerLink="/login">
+                  <div class="d-flex">
+                    <i class="bi bi-link-45deg d-block d-md-none"></i>
+                    <span>Log In</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+            <hr class="my-0">
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+</div>

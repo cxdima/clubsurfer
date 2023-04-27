@@ -1,0 +1,16 @@
+section{
+  min-height: 100vh;
+}
+
+li{
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+li i{
+  margin-right: 18px;
+  font-size: 20px;
+  color: green;
+}

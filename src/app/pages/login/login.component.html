@@ -1,0 +1,85 @@
+<section class="pb-5 d-flex align-items-center">
+  <div class="d-flex justify-content-center container">
+    <div>
+
+      <!--header-->
+      <div class="mb-4">
+        <h1 class="display-6 fw-semibold text-center">Log in</h1>
+        <p class="lead text-center">Continue with Google or enter your details</p>
+      </div>
+
+      <!--Google login button-->
+        <button class="btn btn-outline-warning w-100 p-2 mb-4" (click)="loginWithGoogle()">
+            <span class="text-gray-700">
+              <i class="bi bi-google" style="margin-right: 8px"></i>
+              Continue with Google
+            </span>
+        </button>
+
+      <!-- separator -->
+      <div class="separator"><small>or</small></div>
+
+      <!-- form -->
+      <form class="mb-3" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
+        <!-- email input field -->
+        <div class="form-floating my-4 needs-validation">
+          <input type="email"
+                 class="form-control"
+                 id="email"
+                 placeholder=" "
+                 [class.is-invalid]="loginForm.get('email')?.invalid && (loginForm.get('email')?.dirty || loginForm.get('email')?.touched)"
+                 formControlName="email">
+          <label for="email">Email address</label>
+          <div class="invalid-feedback">
+            Enter a valid email
+          </div>
+        </div>
+
+        <!-- password input field -->
+        <div class="form-floating mb-3">
+          <input type="password"
+                 class="form-control"
+                 id="password"
+                 placeholder=" "
+                 [class.is-invalid]="loginForm.get('password')?.invalid && (loginForm.get('password')?.dirty || loginForm.get('password')?.touched)"
+                 formControlName="password">
+          <label for="password">Password</label>
+          <div class="invalid-feedback">
+            Password is required
+          </div>
+        </div>
+
+        <!-- remember password checkbox -->
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" id="remember-password" formControlName="rememberPassword">
+          <label class="form-check-label" for="remember-password">
+            <small>Remember password</small>
+          </label>
+        </div>
+
+        <!-- submit button -->
+        <button class="btn btn-warning w-100 p-2" type="submit">Log In</button>
+      </form>
+
+      <!-- links -->
+      <div>
+        <div class="mb-3 text-center">
+          <small>
+            Don't have an account?
+            <a routerLink="/signup">Create one for free</a></small
+          >
+        </div>
+
+        <div class="mb-1 text-center">
+          <a routerLink="/login/forgot-username"><small>Forgot username?</small></a>
+          <i class="bi bi-dot"></i>
+          <a routerLink="/login/forgot-password"><small>Forgot password?</small></a>
+        </div>
+        <div class="text-center">
+          <a href="https://www.google.com" target="_blank"><small>Can't log in?</small></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
