@@ -1,6 +1,6 @@
 {
   "hosting": [{
-    "site": "tasteastic",
+    "site": "clubsurfer",
     "public": "/dist/clubsurfer",
     "rewrites": [
       {
