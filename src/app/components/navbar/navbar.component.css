@@ -1,5 +1,6 @@
 .btn{
   background-color: #ff8906;
+  border-color: #ff8906;
   color: #fffffe;
   font-weight: bolder;
 }
@@ -7,24 +8,30 @@
 .navbar {
   height: 4rem;
   box-shadow: 0 2px 2px -2px rgba(0,0,0,.3);
+  background: #0f0e17;
+}
+
+.navbar-toggler {
+  color: #fffffe !important;
+}
+
+.offcanvas{
+  background: #0f0e17;
 }
 
 .navbar-brand{
-  font-family: 'Pacifico', cursive;
+  font-family: "Bruno ace";
+  color: #fffffe;
   font-size: 32px;
   padding: 0;
 }
 
+hr{
+  color: white;
+}
+
 .offcanvas {
   width: 16rem;
-}
-
-button:hover{
-  color: white !important;
-}
-
-.disabled{
-  color: lightgray !important;
 }
 
 button:after{
@@ -45,7 +52,7 @@ i{
 
 .nav-link{
   padding: 16px;
-  color: black;
+  color: #fffffe;
 }
 
 .navbar-toggler{
