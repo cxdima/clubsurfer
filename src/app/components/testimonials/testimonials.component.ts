@@ -71,7 +71,7 @@ export class TestimonialsComponent {
 
   getTestimonialsToDisplay(width: number): Testimonial[] {
     let displayCount = 3;
-    if (width <= 768) {
+    if (width <= 990){
       displayCount = 1;
     }
     const displayIndices = [(this.currentIndex + this.testimonials.length - 1) % this.testimonials.length, this.currentIndex, (this.currentIndex + 1) % this.testimonials.length];
